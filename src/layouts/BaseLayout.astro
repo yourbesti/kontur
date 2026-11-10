@@ -1,37 +1,66 @@
 ---
-import "@/styles/global.css";
-import BaseHead from "@/components/utility/BaseHead.astro";
-import SkipLink from "@/components/global/SkipLink.astro";
-import Nav from "@/components/global/Nav.astro";
-import Footer from "@/components/global/Footer.astro";
-import type { SeoProps } from "@/types.ts";
+// Faithful port of the Webflow page shell: Webflow's own stylesheet and runtime
+// are self-hosted from /public so the site renders and animates as before.
+import { SITE_NAME, SITE_URL } from "../consts.ts";
+import { isNoindexRoute } from "../utils/seo.ts";
 
-type Props = SeoProps & {
-  /** Theme for the whole page. `inherit` leaves the root defaults in place. */
-  theme?: "inherit" | "light" | "dark" | "brand";
-  /**
-   * Fix the nav over the page rather than letting it stick in flow, so the
-   * first section starts underneath it. Give that section
-   * `paddingTop="navoverlap"` to clear the bar.
-   */
-  overlap?: boolean;
+type Props = {
+  title: string;
+  description?: string;
+  /** Webflow page id (`data-wf-page`), needed by the interactions runtime. */
+  wfPage: string;
+  /** Raw `<style>` block with Webflow's initial interaction states. */
+  style?: string;
+  /** Raw `<link rel="icon">` tags. */
+  icons?: string[];
+  /** JSON-LD blocks, raw JSON strings. */
+  ld?: string[];
 };
 
-const { theme = "inherit", overlap = false, ...seo } = Astro.props;
+const { title, description = "", wfPage, style = "", icons = [], ld = [] } =
+  Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE_URL).href;
+const noindex = isNoindexRoute(Astro.url.pathname);
 ---
 
 <!doctype html>
-<html lang="en" class:list={[theme !== "inherit" && `theme-${theme}`]}>
+<html
+  lang="uk"
+  data-wf-domain="www.konturschool.com"
+  data-wf-page={wfPage}
+  data-wf-site="6aa622568e7640773dc11079"
+>
   <head>
-    <BaseHead {...seo} />
-    <slot name="head" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    {description && <meta name="twitter:description" content={description} />}
+    {!noindex && <link rel="canonical" href={canonical} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="stylesheet" href="/css/site.css" />
+    <Fragment set:html={style} />
+    <script is:inline>
+      !(function (o, c) {
+        var n = c.documentElement,
+          t = " w-mod-";
+        ((n.className += t + "js"),
+          ("ontouchstart" in o ||
+            (o.DocumentTouch && c instanceof DocumentTouch)) &&
+            (n.className += t + "touch"));
+      })(window, document);
+    </script>
+    {icons.map((tag) => <Fragment set:html={tag} />)}
+    {ld.map((json) => <script type="application/ld+json" set:html={json} />)}
   </head>
   <body>
-    <SkipLink />
-    <Nav overlap={overlap} />
-    <main id="main" tabindex="-1">
-      <slot />
-    </main>
-    <Footer />
+    <slot />
   </body>
 </html>

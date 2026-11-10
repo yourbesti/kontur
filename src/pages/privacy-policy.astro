@@ -1,0 +1,7 @@
+---
+import Layout from "@/layouts/BaseLayout.astro";
+import meta from "@/html/meta.json";
+import body from "@/html/privacy-policy.body.html?raw";
+---
+
+<Layout {...meta["privacy-policy"]}><Fragment set:html={body} /></Layout>

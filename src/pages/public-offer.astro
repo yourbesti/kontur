@@ -1,0 +1,7 @@
+---
+import Layout from "@/layouts/BaseLayout.astro";
+import meta from "@/html/meta.json";
+import body from "@/html/public-offer.body.html?raw";
+---
+
+<Layout {...meta["public-offer"]}><Fragment set:html={body} /></Layout>

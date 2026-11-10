@@ -1,0 +1,68 @@
+{
+ "404": {
+  "title": "Not Found",
+  "description": "",
+  "ld": [],
+  "style": "",
+  "wfPage": "6aa622588e7640773dc110cb",
+  "icons": [
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: light)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: dark)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-0aa8fcdf.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"48x48\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-eace21d0.jpg\" rel=\"apple-touch-icon\" sizes=\"180x180\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-ffb44dc7.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"192x192\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-45ad05ca.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"512x512\"/>"
+  ]
+ },
+ "index": {
+  "title": "Від гри до кар'єри: Курс 3D-моделювання для дітей | Kontur",
+  "description": "Індивідуальний та ефективний онлайн-курс по моделюванню в Blender для дітей. Навчіться створювати 3D-моделі для відеоігор та анімацій. Спробуйте безкоштовне пробне заняття!",
+  "ld": [
+   "\n  [\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"Course\",\n    \"name\": \"Від гри до кар'єри: Курс 3D-моделювання для дітей\",\n    \"description\": \"Індивідуальний та ефективний онлайн-курс по моделюванню в Blender для дітей. Навчіться створювати 3D-моделі для відеоігор та анімацій.\",\n    \"provider\": {\n      \"@type\": \"Organization\",\n      \"name\": \"Kontur\",\n      \"sameAs\": \"https://www.konturschool.com/\"\n    },\n    \"hasCourseInstance\": {\n      \"@type\": \"CourseInstance\",\n      \"courseMode\": \"Online\",\n      \"instructor\": {\n        \"@type\": \"Person\",\n        \"name\": \"Максим Барбалюк\",\n        \"description\": \"Тімлід 3D-відділу з понад 5-річним досвідом у комп'ютерній графіці\"\n      }\n    },\n    \"offers\": [\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Пакет 4 заняття\",\n        \"price\": \"2080\",\n        \"priceCurrency\": \"UAH\",\n        \"category\": \"Paid\"\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Пакет 8 занять\",\n        \"price\": \"4000\",\n        \"priceCurrency\": \"UAH\",\n        \"category\": \"Paid\"\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Пакет 16 занять\",\n        \"price\": \"7680\",\n        \"priceCurrency\": \"UAH\",\n        \"category\": \"Paid\"\n      },\n      {\n        \"@type\": \"Offer\",\n        \"name\": \"Пакет 32 заняття\",\n        \"price\": \"14400\",\n        \"priceCurrency\": \"UAH\",\n        \"category\": \"Paid\"\n      }\n    ]\n  },\n  {\n    \"@context\": \"https://schema.org\",\n    \"@type\": \"FAQPage\",\n    \"mainEntity\": [\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Який комп'ютер потрібен для навчання? Чи треба купувати потужний ПК?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Для старту та комфортного навчання на курсі підійде звичайний сучасний ноутбук або домашній комп'ютер. Blender - чудово оптимізована програма. Надпотужний ігровий комп'ютер на цьому етапі не потрібен, головне — наявність мишки (з коліщатком) та стабільний інтернет.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Як проходить навчання?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Урок триває 55 хвилин. Протягом цього часу учень спілкується з викладачем у реальному часі, створює свої моделі, налаштовує текстури та анімації, а також одразу отримує фідбек. Наприкінці заняття дається домашнє завдання.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Чи потрібно дитині вміти малювати?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Ні, вміти малювати необов'язково! 3D-моделювання - це більше про просторове мислення, логіку та розуміння форм, ніж про класичний малюнок від руки.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Програма Blender платна?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Ні, Blender - це абсолютно безкоштовна програма з відкритим вихідним кодом (Open Source), якою користуються професіонали по всьому світу. Вам не доведеться купувати жодних ліцензій чи підписок для навчання.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Для якого віку найкраще підходить цей курс?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Курс ідеально підходить для всіх, починаючи від дітей, які тільки відкривають для себе нові напрямки, так і для дорослих, яким цікава 3D-графіка та нові можливості.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Чи є домашні завдання і чи допомагають з ними?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Так, після більшості уроків є практичні завдання. Максим особисто перевіряє кожну роботу, дає детальний фідбек та підказує, як виправити помилки.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Що робити, якщо ми пропустили заняття?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Це зовсім не проблема. Заняття можна легко перенести на інший зручний час - для цього достатньо просто зв'язатися з викладачем та попередити його.\"\n        }\n      },\n      {\n        \"@type\": \"Question\",\n        \"name\": \"Що робити після завершення базового курсу?\",\n        \"acceptedAnswer\": {\n          \"@type\": \"Answer\",\n          \"text\": \"Після завершення базового курсу ви отримуєте сертифікат. Далі у нас є розширений курс, який складається з 72 уроків. На ньому ми вивчаємо нові програми для текстурування та моделювання.\"\n        }\n      }\n    ]\n  }\n]\n  "
+  ],
+  "style": "<style>@media (min-width:992px) {html.w-mod-js:not(.w-mod-ix) [data-w-id=\"3935a5db-f451-09a8-5871-596f86a69329\"] {height:0px;}html.w-mod-js:not(.w-mod-ix) [data-w-id=\"82f5e570-6fe3-f42d-2052-7ea1b12ac60d\"] {background-color:rgba(102,102,102,0.2);color:rgb(230,230,230);}}</style>",
+  "wfPage": "6aa622588e7640773dc110c9",
+  "icons": [
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: light)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: dark)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-0aa8fcdf.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"48x48\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-eace21d0.jpg\" rel=\"apple-touch-icon\" sizes=\"180x180\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-ffb44dc7.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"192x192\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-45ad05ca.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"512x512\"/>"
+  ]
+ },
+ "privacy-policy": {
+  "title": "Політика конфіденційності | Kontur",
+  "description": "Політика конфіденційності школи Kontur. Дізнайтеся, як ми збираємо, обробляємо та надійно захищаємо ваші персональні дані.",
+  "ld": [
+   "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Політика конфіденційності\",\n  \"description\": \"Політика конфіденційності школи Kontur. Дізнайтеся, як ми збираємо, обробляємо та надійно захищаємо ваші персональні дані.\",\n  \"url\": \"https://www.konturschool.com/privacy-policy\",\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Kontur\",\n    \"legalName\": \"ФОП Данілевич Оксана Петрівна\",\n    \"url\": \"https://www.konturschool.com/\",\n    \"contactPoint\": {\n      \"@type\": \"ContactPoint\",\n      \"telephone\": \"+380975970049\",\n      \"email\": \"amatsy008@gmail.com\",\n      \"contactType\": \"customer service\"\n    }\n  }\n}\n"
+  ],
+  "style": "",
+  "wfPage": "6aa813a0cc10b78397127e69",
+  "icons": [
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: light)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: dark)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-0aa8fcdf.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"48x48\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-eace21d0.jpg\" rel=\"apple-touch-icon\" sizes=\"180x180\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-ffb44dc7.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"192x192\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-45ad05ca.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"512x512\"/>"
+  ]
+ },
+ "public-offer": {
+  "title": "Публічна оферта | Kontur",
+  "description": "Ознайомтеся з публічним договором школи 3D-моделювання Kontur. Офіційні умови навчання, оплати, перенесення занять та повернення коштів.",
+  "ld": [
+   "\n{\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"WebPage\",\n  \"name\": \"Публічна оферта\",\n  \"description\": \"Ознайомтеся з публічним договором школи 3D-моделювання Kontur. Офіційні умови навчання, оплати, перенесення занять та повернення коштів.\",\n  \"url\": \"https://www.konturschool.com/public-offer\",\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"Kontur\",\n    \"legalName\": \"ФОП Данілевич Оксана Петрівна\",\n    \"taxID\": \"2793318983\",\n    \"url\": \"https://www.konturschool.com/\",\n    \"contactPoint\": {\n      \"@type\": \"ContactPoint\",\n      \"telephone\": \"+380975970049\",\n      \"email\": \"amatsy008@gmail.com\",\n      \"contactType\": \"customer service\"\n    }\n  }\n}\n"
+  ],
+  "style": "",
+  "wfPage": "6aa8110383fdf48bfb0796ad",
+  "icons": [
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: light)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-6bce058c.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"32x32\" media=\"(prefers-color-scheme: dark)\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-0aa8fcdf.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"48x48\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-eace21d0.jpg\" rel=\"apple-touch-icon\" sizes=\"180x180\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-ffb44dc7.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"192x192\"/>",
+   "<link href=\"/assets/photo_2023-11-20_13-49-32-1-45ad05ca.jpg\" rel=\"icon\" type=\"image/png\" sizes=\"512x512\"/>"
+  ]
+ }
+}
