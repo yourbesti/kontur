@@ -1,0 +1,32 @@
+{
+  "name": "kontur",
+  "type": "module",
+  "version": "0.0.1",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "check": "astro check",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.12",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.4.7",
+    "typescript": "^6.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^3.9.10",
+    "prettier-plugin-astro": "^1.1.2"
+  },
+  "lumos": {
+    "version": "1.0.3",
+    "commit": "9f149ee80244afc0a98f809a74b70c67a009177e",
+    "scaffolded": "2026-11-10"
+  }
+}
