@@ -15,4 +15,36 @@ const body = raw.replaceAll(
 
 <script>
   import "@/scripts/contact-form.ts";
+  import "@/scripts/faq.ts";
+  import "@/scripts/media-popup.ts";
 </script>
+
+<style is:global>
+  .home_faq-answer {
+    height: 0;
+    transition: height 0.35s ease;
+  }
+  .home_faq-icon-wrapper .icon-embed-small {
+    transition: transform 0.35s ease;
+  }
+  .home_faq-accordion.is-open .icon-embed-small {
+    transform: rotate(45deg);
+  }
+  .home_faq-question:focus-visible {
+    outline: 2px solid #e6e6e6;
+    outline-offset: -2px;
+    border-radius: 1.5rem;
+  }
+  .custom-popup-close:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+</style>
+
+<noscript>
+  <style>
+    .home_faq-answer {
+      height: auto;
+    }
+  </style>
+</noscript>

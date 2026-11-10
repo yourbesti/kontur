@@ -495,72 +495,7 @@ select::-ms-expand {
 }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', () => {
-    const overlay = document.createElement('div');
-    overlay.className = 'custom-popup-overlay';
-    
-    const closeBtn = document.createElement('div');
-    closeBtn.className = 'custom-popup-close';
-    
-    const contentContainer = document.createElement('div');
-    contentContainer.className = 'custom-popup-content';
-    
-    overlay.appendChild(closeBtn);
-    overlay.appendChild(contentContainer);
-    document.body.appendChild(overlay);
 
-    const triggers = document.querySelectorAll('[pop-up]');
-    
-    triggers.forEach(trigger => {
-        trigger.style.cursor = 'pointer';
-        
-        trigger.addEventListener('click', (e) => {
-            e.preventDefault();
-            contentContainer.innerHTML = '';
-            
-            let mediaElement;
-            const isImg = trigger.tagName.toLowerCase() === 'img';
-            const isVideo = trigger.tagName.toLowerCase() === 'video';
-            const hasVideoInside = trigger.querySelector('video');
-            const hasImgInside = trigger.querySelector('img');
-
-            if (isImg || hasImgInside) {
-                const sourceImg = isImg ? trigger : hasImgInside;
-                mediaElement = document.createElement('img');
-                mediaElement.src = sourceImg.src;
-            } else if (isVideo || hasVideoInside) {
-                const sourceVideo = isVideo ? trigger : hasVideoInside;
-                mediaElement = document.createElement('video');
-                const sourceTag = sourceVideo.querySelector('source');
-                mediaElement.src = sourceVideo.src || (sourceTag ? sourceTag.src : '');
-                mediaElement.controls = true;
-                mediaElement.autoplay = true;
-                mediaElement.playsInline = true;
-            }
-
-            if (mediaElement) {
-                contentContainer.appendChild(mediaElement);
-                overlay.classList.add('is-active');
-            }
-        });
-    });
-
-    const closePopup = () => {
-        overlay.classList.remove('is-active');
-        setTimeout(() => {
-            contentContainer.innerHTML = '';
-        }, 300);
-    };
-
-    closeBtn.addEventListener('click', closePopup);
-    overlay.addEventListener('click', (e) => {
-        if (e.target === overlay) {
-            closePopup();
-        }
-    });
-});
-</script>
 
 
 
@@ -597,50 +532,37 @@ const homeExamplesSwiper = new Swiper('.home_examples-swiper.swiper', {
 </div></div></a><a href="#trial-lesson" class="home_price-card w-inline-block"><div class="home_price-card-content"><div class="home_price-nums">32 заняття</div><div class="text-color-secondary">14 400 грн</div></div><div class="home_price-card-icon"><div class="w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></a></div></div></div></div></section><section class="section"><div class="padding-global padding-section-large is-top"><div class="container-large"><div class="w-layout-grid home_faq-wrapper"><h2>FAQ</h2><div class="w-layout-grid home_faq-list"><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Який комп&#x27;ютер потрібен для навчання? Чи треба купувати потужний ПК?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></a></div></div></div></div></section><section class="section"><div class="padding-global padding-section-large is-top"><div class="container-large"><div class="w-layout-grid home_faq-wrapper"><h2>FAQ</h2><div class="w-layout-grid home_faq-list"><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Який комп&#x27;ютер потрібен для навчання? Чи треба купувати потужний ПК?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Для старту та комфортного навчання на курсі підійде звичайний сучасний ноутбук або домашній комп&#x27;ютер. Blender - чудово оптимізована програма. Надпотужний ігровий комп&#x27;ютер на цьому етапі не потрібен, головне — наявність мишки (з коліщатком) та стабільний інтернет.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Як проходить навчання?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Для старту та комфортного навчання на курсі підійде звичайний сучасний ноутбук або домашній комп&#x27;ютер. Blender - чудово оптимізована програма. Надпотужний ігровий комп&#x27;ютер на цьому етапі не потрібен, головне — наявність мишки (з коліщатком) та стабільний інтернет.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Як проходить навчання?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Урок триває 55 хвилин. Протягом цього часу учень спілкується з викладачем у реальному часі, створює свої моделі, налаштовує текстури та анімації, а також одразу отримує фідбек. Наприкінці заняття дається домашнє завдання. Під час його виконання можна переписуватись із викладачем і звертатися по допомогу, якщо виникають труднощі.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Чи потрібно дитині вміти малювати?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Урок триває 55 хвилин. Протягом цього часу учень спілкується з викладачем у реальному часі, створює свої моделі, налаштовує текстури та анімації, а також одразу отримує фідбек. Наприкінці заняття дається домашнє завдання. Під час його виконання можна переписуватись із викладачем і звертатися по допомогу, якщо виникають труднощі.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Чи потрібно дитині вміти малювати?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Ні, вміти малювати необов&#x27;язково! 3D-моделювання - це більше про просторове мислення, логіку та розуміння форм, ніж про класичний малюнок від руки. Ми починаємо з найпростіших базових фігур і поступово вчимося створювати з них складні об&#x27;єкти.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Програма Blender платна?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Ні, вміти малювати необов&#x27;язково! 3D-моделювання - це більше про просторове мислення, логіку та розуміння форм, ніж про класичний малюнок від руки. Ми починаємо з найпростіших базових фігур і поступово вчимося створювати з них складні об&#x27;єкти.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Програма Blender платна?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Ні, Blender - це абсолютно безкоштовна програма з відкритим вихідним кодом (Open Source), якою користуються професіонали по всьому світу. Вам не доведеться купувати жодних ліцензій чи підписок для навчання.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є у вас групові заняття?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Ні, Blender - це абсолютно безкоштовна програма з відкритим вихідним кодом (Open Source), якою користуються професіонали по всьому світу. Вам не доведеться купувати жодних ліцензій чи підписок для навчання.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є у вас групові заняття?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так, ми проводимо групові заняття. Щоб дізнатися актуальні умови, розклад та ціни, напишіть нам у Telegram або заповніть форму зворотного зв&#x27;язку на сайті.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Для якого віку найкраще підходить цей курс?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так, ми проводимо групові заняття. Щоб дізнатися актуальні умови, розклад та ціни, напишіть нам у Telegram або заповніть форму зворотного зв&#x27;язку на сайті.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Для якого віку найкраще підходить цей курс?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Курс ідеально підходить для всіх, починаючи від дітей, які тільки відкривають для себе нові напрямки, так і для дорослих, яким цікава 3D-графіка та нові можливості.</p></div></div></div></div><a data-w-id="4f7671b3-1dc0-5667-d153-838cf200c94e" style="display:block" href="#" class="button second-var is-show w-button">Показати більше</a><div style="display:none" class="home_faq-list-hidden"><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є домашні завдання і чи допомагають з ними?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Курс ідеально підходить для всіх, починаючи від дітей, які тільки відкривають для себе нові напрямки, так і для дорослих, яким цікава 3D-графіка та нові можливості.</p></div></div></div></div><a data-w-id="4f7671b3-1dc0-5667-d153-838cf200c94e" style="display:block" href="#" class="button second-var is-show w-button">Показати більше</a><div style="display:none" class="home_faq-list-hidden"><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є домашні завдання і чи допомагають з ними?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так, після більшості уроків є практичні завдання, адже без практики вивчити 3D неможливо. Але дитина не залишається з ними сам на сам. Максим особисто перевіряє кожну роботу, дає детальний фідбек та підказує, як виправити помилки.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Що робити, якщо ми пропустили заняття (через світло чи хворобу)?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так, після більшості уроків є практичні завдання, адже без практики вивчити 3D неможливо. Але дитина не залишається з ними сам на сам. Максим особисто перевіряє кожну роботу, дає детальний фідбек та підказує, як виправити помилки.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Що робити, якщо ми пропустили заняття (через світло чи хворобу)?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Це зовсім не проблема. Заняття можна легко перенести на інший зручний час - для цього достатньо просто зв&#x27;язатися з викладачем та попередити його. Ми розуміємо всі обставини і завжди йдемо назустріч.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Що робити після завершення базового курсу?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Це зовсім не проблема. Заняття можна легко перенести на інший зручний час - для цього достатньо просто зв&#x27;язатися з викладачем та попередити його. Ми розуміємо всі обставини і завжди йдемо назустріч.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Що робити після завершення базового курсу?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Після завершення базового курсу ви отримуєте сертифікат. Далі у нас є розширений курс, який складається з 72 уроків. На ньому ми вивчаємо нові програми для текстурування та моделювання. Проєкти підбираються повністю індивідуально, залежно від успішності, темпу та інтересів учня.</p></div></div></div></div><div class="home_faq-accordion"><div data-w-id="e2d0d47f-ab24-832c-819b-19a6b58ec120" class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є у вас напрямки окрім 3D-моделювання?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Після завершення базового курсу ви отримуєте сертифікат. Далі у нас є розширений курс, який складається з 72 уроків. На ньому ми вивчаємо нові програми для текстурування та моделювання. Проєкти підбираються повністю індивідуально, залежно від успішності, темпу та інтересів учня.</p></div></div></div></div><div class="home_faq-accordion"><div class="home_faq-question"><div class="home_faq-question-title"><h3>Чи є у вас напрямки окрім 3D-моделювання?</h3></div><div class="home_faq-icon-wrapper"><div class="icon-embed-small w-embed"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.33333 20V0H11.7083V20H8.33333ZM0 11.7083V8.29167H20V11.7083H0Z" fill="currentColor"/>
 </svg>
-</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так! У нас є досвідчені викладачі з різних IT та творчих напрямків. Якщо вас цікавить щось конкретне, просто дайте знати - і ми підберемо для вашої дитини відповідний курс та викладача.</p></div></div></div></div></div><a data-w-id="4f7671b3-1dc0-5667-d153-838cf200c957" style="display:none" href="#" class="button second-var is-hide w-button">Сховати</a></div><div class="w-embed w-script"><script>
-document.querySelectorAll('.home_faq-question').forEach(function(trigger) {
-    trigger.addEventListener('click', function() {
-        document.querySelectorAll('.home_faq-question').forEach(function(other) {
-            if (other !== trigger) {
-                let answer = other.nextElementSibling;
-                if (answer && answer.style.height !== '0px') {
-                    other.click();
-                }
-            }
-        });
-    });
-});
-</script></div></div></div></div></section><section id="consultation" class="section position-relative"><div class="padding-global padding-section-large"><div class="container-large max-height-full"><div class="home_contact-wrapper"><div class="home_contact-title"><h2 class="heading">Потрібна консультація?</h2><div class="max-width-400 text-color-secondary">Залишай заявку і ми з радістю тобі допоможем</div></div><div class="home_contact-form-block w-form"><form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://api.web3forms.com/submit" class="home_contact-form" data-wf-page-id="6aa622588e7640773dc110c9" data-wf-element-id="7ba6a851-a42d-eb34-7153-89ac649e6a4b"><input class="home_contact-input w-input" maxlength="256" name="name" data-name="Name" placeholder="Ваше ім’я" type="text" id="name" required=""/><input class="home_contact-input w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Телефон" type="tel" id="Phone" required=""/><select id="contact-way" name="contact-way" data-name="contact way" required="" aria-label="Оберіть спосіб зв&#x27;язку" class="home_contact-input is-select w-select"><option value="">Як з вами зв’язатись?</option><option value="Telegram">Телеграм</option><option value="Viber">Вайбер</option><option value="Call me">Зателефонувати</option></select><textarea placeholder="Повідомлення(необов&#x27;язково)" maxlength="5000" id="field-2" name="field-2" data-name="Field 2" class="home_contact-input w-input"></textarea><input type="submit" data-wait="Будь ласка, зачекайте..." class="button second-var w-button" value="Залишити заявку"/><div class="w-embed"><style>
+</div></div></div><div class="home_faq-answer"><div class="home_faq-answer-content"><div class="home_faq-rich-text w-richtext"><p>Так! У нас є досвідчені викладачі з різних IT та творчих напрямків. Якщо вас цікавить щось конкретне, просто дайте знати - і ми підберемо для вашої дитини відповідний курс та викладача.</p></div></div></div></div></div><a data-w-id="4f7671b3-1dc0-5667-d153-838cf200c957" style="display:none" href="#" class="button second-var is-hide w-button">Сховати</a></div><div class="w-embed w-script"></div></div></div></div></section><section id="consultation" class="section position-relative"><div class="padding-global padding-section-large"><div class="container-large max-height-full"><div class="home_contact-wrapper"><div class="home_contact-title"><h2 class="heading">Потрібна консультація?</h2><div class="max-width-400 text-color-secondary">Залишай заявку і ми з радістю тобі допоможем</div></div><div class="home_contact-form-block w-form"><form id="email-form" name="email-form" data-name="Email Form" method="post" action="https://api.web3forms.com/submit" class="home_contact-form" data-wf-page-id="6aa622588e7640773dc110c9" data-wf-element-id="7ba6a851-a42d-eb34-7153-89ac649e6a4b"><input class="home_contact-input w-input" maxlength="256" name="name" data-name="Name" placeholder="Ваше ім’я" type="text" id="name" required=""/><input class="home_contact-input w-input" maxlength="256" name="Phone" data-name="Phone" placeholder="Телефон" type="tel" id="Phone" required=""/><select id="contact-way" name="contact-way" data-name="contact way" required="" aria-label="Оберіть спосіб зв&#x27;язку" class="home_contact-input is-select w-select"><option value="">Як з вами зв’язатись?</option><option value="Telegram">Телеграм</option><option value="Viber">Вайбер</option><option value="Call me">Зателефонувати</option></select><textarea placeholder="Повідомлення(необов&#x27;язково)" maxlength="5000" id="field-2" name="field-2" data-name="Field 2" class="home_contact-input w-input"></textarea><input type="submit" data-wait="Будь ласка, зачекайте..." class="button second-var w-button" value="Залишити заявку"/><div class="w-embed"><style>
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
